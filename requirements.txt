@@ -1,1 +1,2 @@
 Flask==1.1.2
+deep-translator==1.4.2
