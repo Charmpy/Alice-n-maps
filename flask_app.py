@@ -2,8 +2,7 @@ import os
 from flask import Flask, request
 import logging
 import json
-import random
-from deep_translator import GoogleTranslator
+# from deep_translator import GoogleTranslator
 
 
 app = Flask(__name__)
@@ -54,8 +53,9 @@ def handle_dialog(res, req):
     else:
         if 'Переведи слово'.lower() in req["request"]['command'].lower():
             translation = req["request"]['command'].lower()[15:]
-            result = GoogleTranslator(source='auto',
-                                          target='en').translate(translation)
+            result = translation
+            # result = GoogleTranslator(source='auto',
+            #                               target='en').translate(translation)
             res['response']['text'] = result
 
         else:
