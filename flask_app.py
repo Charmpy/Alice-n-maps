@@ -28,7 +28,6 @@ def main():
 
 
 def handle_dialog(res, req):
-    global pretty_flag, good
     user_id = req['session']['user_id']
 
     if req['session']['new']:
